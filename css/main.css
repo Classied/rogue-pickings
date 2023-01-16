@@ -1,51 +1,47 @@
 /******** GLOBAL STYLES ********/
+/* ADD FLEXBOX STYLES FOR MOBILE  */
+/* The width property has been changed to max-width */
 html {
 	font-size: 16px;
 }
 
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-	font-size: .9em;
-	color: #000000;
+	font-size: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-/* ADD FLEXBOX STYLES FOR MOBILE  */
-/* The width property has been changed to max-width */
 .content-wrapper {
 	max-width: 1200px;
 	width: 90%;
 	display: flex;
 	justify-content: center;
 	flex-flow: row wrap;
+	align-items: center;
 }
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
+	color: #000000;
 	text-transform: uppercase;
 	font-weight: 700;
 }
 
-h1 {
-	font-size: 1.875em;
-}
-
-h2 {
-	font-size: 1.5em;
-}
-
 h3 {
-	font-size: 1.25em;
-}
-
-h4 {
 	font-size: .75em;
 }
 
+
 p {
-	line-height: 36px;
-	font-size: 1rem;
+	line-height: 21px;
+	font-size: 14px;
+}
+
+ul {
+	margin: 0;
 }
 
 /******** HEADER STYLES ********/
@@ -54,95 +50,101 @@ header {
 	display: flex;
 	justify-content: center;
 	text-align: center;
-}
-
-header h1 {
-	margin: 0;
-	padding: 38px 0 20px 0;
+	align-items: center;
+	flex-flow: row wrap;
 	width: 100%;
 	border-bottom: 3px solid #77a466;
 }
 
+header h1 {
+	margin: 0;
+	padding: 38px 20px 20px 20px;
+	width: 100%;
+	border-bottom: 3px solid #77a466;
+	font-size: 1.875em;
+}
+
 header h1 span {
-	color: #45610E;
+	color: #77a466
 }
 
 header nav {
 	padding: 20px 0;
+	width: 100%;
 }
 
 header nav ul {
 	margin: 0;
 	padding: 0;
-	list-style: none;
 }
 
 header nav ul li {
-	font-size: .875rem;
+	font-size: .875em;
 	font-weight: 700;
 	text-transform: uppercase;
 	padding: 10px 0;
-	width: 100%;
-
+	list-style: none;
 }
 
 header nav ul li a {
 	text-decoration: none;
-	color: #45610E;
+	color: #77a466;
 }
 
 /********  MAIN STYLES ********/
-/******** TOP SECTION ********/
-/* The widths are in a percentage! */
-.main-image img {
-	width: 100%;
-	border-top: 3px solid #77A466;
-	border-bottom: 3px solid #77a466;
-}
-
-.main-title h2 {
-	color: #45610E;
-	padding: 5px 0;
-}
-
-/******** BOTTOM SECTION ********/
+/******** TOP & BOTTOM SECTION ********/
 .top-section,
 .bottom-section {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	flex-flow: row wrap;
 }
 
-.bottom-section .content-wrapper {
-	border-top: 5px solid #EEE;
-	border-bottom: 5px solid #EEE;
+/******** TOP SECTION ********/
+
+/* The widths are in a percentage! */
+.main-image img {
+	width: 100%;
+	border-bottom: 3px solid #77a466;
 }
+
+.main-title h2 {
+	color: #77a466;
+	padding: 5px 0;
+	text-align: left;
+	font-size: 1.125em;
+}
+
+.main-title p {
+	padding: 0;
+	font-size: 1em;
+	line-height: 1.5625;
+}
+
+/******** BOTTOM SECTION ********/
 
 .section-one,
 .section-two,
 .section-three {
-	box-sizing: border-box;
-}
-
-.section-one {
-	/* width: 29%; */
 	width: 100%;
+	border-top: 1px solid #EEE;
 }
 
+/* 
 .section-two {
-	/* width: 42%; */
-	width: 100%;
-	border-top: 5px solid #EEE;
-	border-bottom: 5px solid #EEE;
-}
+	TABLET WIDTH: 42%;
+} */
 
-.section-three {
-	/* width: 29%; */
-	width: 100%;
-}
+/* 
+ .section-one {
+	TABLET WIDTH: 29%; 
+}  */
 
-.bottom-section h3 {
-	margin: 30px 0;
-}
+/* .section-three {
+	TABLET WIDTH: 29%;
+} */
+
 
 .menu-list {
 	padding-left: 0;
@@ -150,64 +152,69 @@ header nav ul li a {
 }
 
 .menu-list li {
-	color: #45610E;
-	font-size: 1rem;
-	line-height: 36px;
+	color: #77A466;
+	padding: 10px 0;
+}
+
+.reviews {
+	color: #333;
+	font-size: 1em;
+	line-height: 1.3125;
+}
+
+.address {
+	font-size: 1em;
+	line-height: 1.5;
 }
 
 /******** FOOTER STYLES ********/
 /* The widths are in a percentage! */
 footer {
-	margin-top: 8px;
+	width: 100%;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-flow: row wrap;
+	border-top: 3px solid #EEE;
 }
 
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
-	color: #45610E;
+	color: #77a466;
 	font-size: .875rem;
 }
 
-@media all and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 	/* Tablet styles here */
 	/* BOTTOM-SECTION  */
 
-	.bottom-section .content-wrapper {
-		justify-content: space-evenly;
+	.bottom-section{
+		justify-content: space-between;
+		align-items: flex-start;
+		border-top: 1px solid #EEE;
 	}
 
-	.section-one {
-		width: 29%;
+	.section-one,
+	.section-two,
+	.section-three {
+		border-top: none;
+		flex-basis: 30%;
 	}
 
 	.section-two {
-		width: 42%;
-		border-left: 5px solid #EEE;
-		border-right: 5px solid #EEE;
-		border-top: none;
-		border-bottom: none;
-		padding: 0 30px;
-	}
-
-	.section-three {
-		width: 29%;
+		border-left: 1px solid #EEE;
+		border-right: 1px solid #EEE;
+		padding: 0 20px;
 	}
 }
 
-@media all and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
 	/* Desktop styles here */
 
-	body{
-		font-size: 1em;
-	}
-
-	header .content-wrapper {
+	header {
 		justify-content: space-between;
-		align-items: center;
-		padding: 20px 0;
-
 	}
 
 	header h1 {
@@ -216,9 +223,8 @@ footer span {
 		border-bottom: none;
 		text-align: left;
 	}
-
 	header nav {
-		width: 21%;
+		width: 40%;
 	}
 
 	header nav ul {

@@ -1,6 +1,5 @@
-/******** GLOBAL STYLES ********/
-/* ADD FLEXBOX STYLES FOR MOBILE  */
-/* The width property has been changed to max-width */
+/******** GLOBAL STYLES-- MOBILE ********/
+
 html {
 	font-size: 16px;
 }
@@ -44,8 +43,6 @@ ul {
 	margin: 0;
 }
 
-/******** HEADER STYLES ********/
-/* The widths are in a percentage! */
 header {
 	display: flex;
 	justify-content: center;
@@ -91,8 +88,6 @@ header nav ul li a {
 	color: #77a466;
 }
 
-/********  MAIN STYLES ********/
-/******** TOP & BOTTOM SECTION ********/
 .top-section,
 .bottom-section {
 	display: flex;
@@ -101,9 +96,6 @@ header nav ul li a {
 	flex-flow: row wrap;
 }
 
-/******** TOP SECTION ********/
-
-/* The widths are in a percentage! */
 .main-image img {
 	width: 100%;
 	border-bottom: 3px solid #77a466;
@@ -122,29 +114,12 @@ header nav ul li a {
 	line-height: 1.5625;
 }
 
-/******** BOTTOM SECTION ********/
-
 .section-one,
 .section-two,
 .section-three {
 	width: 100%;
 	border-top: 1px solid #EEE;
 }
-
-/* 
-.section-two {
-	TABLET WIDTH: 42%;
-} */
-
-/* 
- .section-one {
-	TABLET WIDTH: 29%; 
-}  */
-
-/* .section-three {
-	TABLET WIDTH: 29%;
-} */
-
 
 .menu-list {
 	padding-left: 0;
@@ -167,8 +142,6 @@ header nav ul li a {
 	line-height: 1.5;
 }
 
-/******** FOOTER STYLES ********/
-/* The widths are in a percentage! */
 footer {
 	width: 100%;
 	display: flex;
@@ -187,9 +160,8 @@ footer span {
 }
 
 @media only screen and (min-width: 768px) {
-	/* Tablet styles here */
-	/* BOTTOM-SECTION  */
-
+	/* TABLET STYLES */
+	
 	.bottom-section{
 		justify-content: space-between;
 		align-items: flex-start;
@@ -211,7 +183,7 @@ footer span {
 }
 
 @media only screen and (min-width: 1200px) {
-	/* Desktop styles here */
+	/* DESKTOP STYLES */
 
 	header {
 		justify-content: space-between;
